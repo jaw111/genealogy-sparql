@@ -1,0 +1,14 @@
+#+ summary: Events a person attended
+#+ tags: 
+#+   - event
+#+ enumerate:
+#+   - person
+
+DEFINE input:same-as "yes"
+PREFIX schema: <http://schema.org/>
+SELECT ?event
+FROM <http://data.cubiss.nl/genealogy/>
+FROM <http://data.cubiss.nl/genealogyclean/>
+WHERE {
+  ?event schema:attendee/schema:attendee ?_person_iri .
+}
