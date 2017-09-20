@@ -6,6 +6,6 @@ PREFIX schema: <http://schema.org/>
 SELECT ?event
 FROM <http://data.cubiss.nl/genealogy/>
 WHERE {
-  ?event schema:attendee/schema:attendee ?_person_iri .
+  ?event schema:attendee/schema:attendee ?person .
 }
 LIMIT 100
