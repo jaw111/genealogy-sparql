@@ -1,0 +1,14 @@
+#+ summary: Events a person attended
+#+ tags: 
+#+   - event
+#+ enumerate:
+#+   - person
+
+PREFIX schema: <http://schema.org/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?event
+FROM <http://data.cubiss.nl/genealogy/>
+FROM <http://data.cubiss.nl/genealogyclean/>
+WHERE {
+  ?event schema:attendee/schema:attendee/owl:sameAs ?_person_iri .
+}
