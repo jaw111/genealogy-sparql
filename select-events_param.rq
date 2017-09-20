@@ -1,8 +1,6 @@
 #+ summary: Events a person attended
 #+ tags: 
 #+   - event
-#+ enumerate:
-#+   - person
 
 DEFINE input:same-as "yes"
 PREFIX schema: <http://schema.org/>
