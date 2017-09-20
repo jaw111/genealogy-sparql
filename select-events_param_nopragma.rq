@@ -4,9 +4,10 @@
 
 PREFIX schema: <http://schema.org/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-SELECT ?event ?_person_iri
+SELECT ?event ?person
 FROM <http://data.cubiss.nl/genealogy/>
 FROM <http://data.cubiss.nl/genealogyclean/>
 WHERE {
-  ?event schema:attendee/schema:attendee/owl:sameAs ?_person_iri .
+  bind(?_person_iri as ?person)
+  ?event schema:attendee/schema:attendee/owl:sameAs ?person .
 }
